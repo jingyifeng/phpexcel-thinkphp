@@ -10,7 +10,7 @@
 该项目是通过composer把PHPExcel引入到Thinkphp5.0项目中的，如下载运行时，提示找不到PHPExcel类库，请在终端或者命令提示符下，执行 `composer self-update`和`composer dump`两个命令
 
 ## 备注
-> PHPExcel中文手册：(https://www.kancloud.cn/jingyifeng/phpexcel/362604)    
+> PHPExcel中文手册：(https://www.kancloud.cn/jingyifeng/phpexcel)    
 项目视频教程地址：(https://chuanke.baidu.com/6027737-225792.html)    
 作者：易风  
 QQ交流群：494826865
