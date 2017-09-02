@@ -11,6 +11,6 @@
 
 ## 备注
 > PHPExcel中文手册：(https://www.kancloud.cn/jingyifeng/phpexcel/362604)    
-项目视频教程地址：(https://chuanke.baidu.com/6027737-225792.html)
+项目视频教程地址：(https://chuanke.baidu.com/6027737-225792.html)    
 作者：易风  
 QQ交流群：494826865
