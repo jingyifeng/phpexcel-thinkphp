@@ -1,0 +1,55 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\baobiao\public/../application/index\view\login\index.html";i:1502809243;}*/ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>登录</title>
+    <link rel="stylesheet" href="__INDEX__/layui/css/layui.css">
+    <link rel="stylesheet" href="__INDEX__/static/css/style.css">
+    <link rel="icon" href="__INDEX__/static/image/code.png">
+</head>
+<body>
+
+<div class="login-main">
+    <header class="layui-elip">员工登录</header>
+    <form class="layui-form" id="myform" method="post" action="<?php echo url('login/login'); ?>">
+        <div class="layui-input-inline">
+            <input type="text" name="phone" required lay-verify="required" placeholder="手机号" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-input-inline">
+            <input type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-input-inline">
+            <input type="text" name="code" required lay-verify="required" placeholder="验证码" autocomplete="off" class="layui-input">
+            <div><img src="<?php echo captcha_src(); ?>" alt="captcha" id="code" style="cursor: pointer;"/></div>
+        </div>
+        <div class="layui-input-inline login-btn">
+            <button type="submit" class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+        </div>
+    </form>
+</div>
+
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__INDEX__/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['form'], function () {
+
+        var form = layui.form();
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            $("#myform").submit();
+            return false;
+        });
+    });
+    $('#code').on('click',function () {
+       // var imgurl=$('#code').attr('src')+"?"+Math.random(1000,9999);
+        var imgurl=$('#code').attr('src')+"?<?php echo time();?>";
+        $('#code').attr('src',imgurl);
+    })
+</script>
+</body>
+</html>
